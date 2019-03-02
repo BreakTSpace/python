@@ -1,9 +1,9 @@
-i = 1
-def test():
-        global i
-        while i < 999999999:
+def infinite():
+        i = 1
+        while True:
                 try:	
                         print(str(i))
                 except KeyboardInterrupt:
-                        test()
+                        infinite()
                 i += 1
+infinite()
